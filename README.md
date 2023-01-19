@@ -1,7 +1,7 @@
 # MuBu
 Audio Player for an Interactive Museum Experience.
 
-MuBu (short for Museum's Buddy) is a portable audio player that reads RFID tags in the museum space and plays the associated audio files.
+MuBu (short for Museum's Buddy) is a **portable audio player** that reads RFID tags in the museum space and plays the associated audio files.
 Using a simple one-button user interface, visitors can choose from a variety of categories.
 
 Feedback is provided to the visitors via a LED ring ligth on top of the device.
