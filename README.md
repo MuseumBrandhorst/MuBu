@@ -12,3 +12,14 @@ Thus, a variety of usage scenarios are conceivable:
 - interactive scavenger hunts through an exhibition
 - stimulating audio landscapes that encourage active viewing and thinking
 - Non-linear storytelling for rich and personal experiences
+
+## Credits and Acknowledgements
+MuBu is an open source and open hardware project developed at [Museum's Brandhorst](https://www.museum-brandhorst.de/en/) [Factory](https://www.museum-brandhorst.de/en/factory/).
+The current hardware iteration is based on open hardware components and open source code among others from companies such as [Adafruit](https://www.adafruit.com/about).
+The original idea originated from a colaboration with [Media Informatics](http://www.medien.ifi.lmu.de/index.xhtml.en) students from [LMU Munich](https://www.lmu.de/en/).
+
+Special thanks go to:
+Sebastian Burgkart,
+Yanfei Hu Fleischhauer,
+Rebekka Hochhäusler,
+Kathrin Schnizer
