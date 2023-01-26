@@ -84,58 +84,9 @@ bool search (File dir, int id, int cat, String & path) {
         path = path + entry.name();
         return true;
       }
-      // final level: take any file
-      //else if (id==-1 && cat==-1 && entry.isDirectory()==false) {
-      //  path = path + entry.name();
-      //  return true;
-      //}
       entry.close();
     }
   }
   dir.close();
   return state;
 }
-
-/*
-
-String concatenate_path (String m_folder, String s_folder, String f_name) {
-  return "/" + m_folder + "/" + s_folder + "/" + f_name;
-}
-
-bool look_for_file (int id, int cat, String & path) {
-  path = "/";
-  File dir = SD.open("/");
-  while (true) {
-    File folder =  dir.openNextFile();
-    if (! folder) break;
-    if (folder.isDirectory()) {
-      String folder_name = folder.name();
-      folder_name.toLowerCase();
-      if (folder_name.toInt()==id) {
-        while (true) {
-          File sub_folder = folder.openNextFile();
-          if (! sub_folder) break;
-          if (sub_folder.isDirectory()) {
-            String sub_folder_name = sub_folder.name();
-            sub_folder_name.toLowerCase();
-            if (sub_folder_name.toInt()==cat) {
-              File audio_file = sub_folder.openNextFile();
-              String file_name = audio_file.name();
-              file_name.toLowerCase();
-              //path = "/" + folder_name + "/" + sub_folder_name + "/" + file_name;
-              path = concatenate_path(folder_name,sub_folder_name,file_name);
-              audio_file.close();
-              sub_folder.close();
-              folder.close();
-              return true;
-            }
-          }
-          sub_folder.close();
-        }
-      }  
-    }
-    folder.close();
-  }
-  dir.close();
-  return false;
-}*/
