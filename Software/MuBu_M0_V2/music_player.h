@@ -44,18 +44,6 @@ class MUSIC_FEATHER {
     player.useInterrupt(VS1053_FILEPLAYER_PIN_INT);
   }
 
-  /*bool play (uint8_t folder, uint8_t file) {
-    if (isPlaying())
-      player.stopPlaying();
-    TRACK * t = tracks.get(folder,file);
-    if (t==NULL) return false;
-    String n = tracks.get(folder,file)->name();
-    player.startPlayingFile(n.c_str());
-    bool started = isPlaying();
-    if (started && on_start!=NULL) on_start();
-    return started;
-  }*/
-
   void stop () {
     player.stopPlaying();
   }
@@ -86,47 +74,3 @@ class MUSIC_FEATHER {
     }
   }
 };
-
-
-/*
-bool play (int id, int cat, MUSIC_FEATHER * out) {
-  File dir = SD.open("/");
-  while (true) {
-    File folder =  dir.openNextFile();
-    if (! folder) break;
-    if (folder.isDirectory()) {
-      String folder_name = folder.name();
-      folder_name.toLowerCase();
-      if (folder_name.toInt()==id) {
-        while (true) {
-          File sub_folder = folder.openNextFile();
-          if (! sub_folder) break;
-          if (sub_folder.isDirectory()) {
-            String sub_folder_name = sub_folder.name();
-            sub_folder_name.toLowerCase();
-            if (sub_folder_name.toInt()==cat) {
-              File audio_file = sub_folder.openNextFile();
-              String file_name = audio_file.name();
-              file_name.toLowerCase();
-              String path = "/";
-              path += folder_name;
-              path += "/";
-              path += sub_folder_name;
-              path += "/";
-              path += file_name;
-              out->play(path);
-              audio_file.close();
-              sub_folder.close();
-              folder.close();
-              return true;
-            }
-          }
-          sub_folder.close();
-        }
-      }  
-    }
-    folder.close();
-  }
-  dir.close();
-  return false;
-}*/
